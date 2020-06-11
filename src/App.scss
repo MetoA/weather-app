@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+
+@media screen and (max-width: 580px) {
+  .weatherDisplay {
+    flex-direction: column;
+  }
+}
+
+$text-color: #292929;
+$mid-green: #3cbc8d;
+$dark-green: #12573e;
+$bg-color: #def6ed;
+$error-color: rgb(235, 77, 77);
+
+@mixin selectCenter() {
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+}
+
+@mixin select() {
+  background: $mid-green;
+  outline: none;
+  border: none;
+  border: 2px solid $dark-green;
+  color: white;
+  height: 2em;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: $text-color;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  background-color: #def6ed;
+  overflow-x: hidden;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 5%;
+  background: $mid-green;
+  width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px $mid-green inset !important;
+  -webkit-box-shadow: 0 0 0 30px $mid-green inset !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  input {
+    border: none;
+    background-color: $mid-green;
+    height: 2em;
+    padding: 20px;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8);
+
+    &:focus {
+      outline: none;
+      border: 2px solid $dark-green;
+    }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  button {
+    background-color: #8ddbbf;
+    border: none;
+    border-bottom: 2px solid $mid-green;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      transition: background-color 0.3s ease-in, border-bottom 0.3s ease-in,
+        color 0.3s ease-in;
+      background-color: $dark-green;
+      border-bottom: 2px solid $dark-green;
+      color: white;
+    }
+
+    &:focus {
+      transition: background-color 0.3s ease-in-out,
+        border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+      border-bottom: 2px solid $dark-green;
+      outline: none;
+      margin: 0;
+      background-color: $dark-green;
+      color: white;
+    }
+  }
+}
+
+.error {
+  background-color: rgb(235, 77, 77);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.weatherDisplay {
+  padding: 10px;
+  display: flex;
+}
+
+.weatherMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  & > * {
+    padding: 5px;
+  }
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > * :not(select) {
+    padding: 10px;
+  }
+}
+
+.temp {
+  padding: 10px;
+  font-size: 3em;
+  font-weight: 500;
+}
+
+.temp_secondary {
+  font-size: 1.3em;
+}
+
+.feels_like {
+  padding: 10px;
+}
+
+.arrow {
+  padding: 0 !important;
+}
+
+.temp_humidity_wind {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .wind,
+  p {
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+  }
+}
+
+.svg {
+  transform: scale(1.5);
+
+  margin: 20px;
+}
+
+.tempSelect {
+  width: 100%;
+  @include selectCenter();
+  @include select();
+}
+
+.windSelect {
+  width: 100%;
+  @include selectCenter();
+  @include select();
+}

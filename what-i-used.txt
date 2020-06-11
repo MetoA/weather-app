@@ -1,0 +1,4 @@
+Open Weather Map API: https://openweathermap.org/api
+// used the current weather data
+
+Animated weather SVG: https://www.amcharts.com/free-animated-svg-weather-icons/
