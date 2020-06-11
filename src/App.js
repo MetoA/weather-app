@@ -101,7 +101,10 @@ function App() {
       <footer>
         <p>
           Created by:{" "}
-          <a target="_blank" href="https://github.com/MetoA/weather-app">
+          <a
+            target="_blank"
+            href="https://github.com/MetoA/weather-app/tree/1cb12d6dfb198a0c10b2e319c67e031526d684f6"
+          >
             Meto Andov
           </a>
         </p>
