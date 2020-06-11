@@ -99,7 +99,12 @@ function App() {
       {displayError && <h2 className="error">City not found!</h2>}
       <WeatherDisplay weatherInfo={weatherInfo}></WeatherDisplay>
       <footer>
-        <p>footer</p>
+        <p>
+          Created by:{" "}
+          <a target="_blank" href="https://github.com/MetoA/weather-app">
+            Meto Andov
+          </a>
+        </p>
       </footer>
     </div>
   );
