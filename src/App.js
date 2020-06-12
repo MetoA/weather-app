@@ -88,7 +88,6 @@ function App() {
         }
       })
       .catch((err) => {
-        // console.log(err);
         setError(err);
       });
   };
